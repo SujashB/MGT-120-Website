@@ -1,0 +1,136 @@
+/* =========================================================
+   game.css — "Walk the cul-de-sac" interactive section
+   Embedded in the Team 6 deck. Reuses deck CSS variables
+   (--paper, --green, --yellow, fonts) defined in styles.css.
+   ========================================================= */
+
+.hood{background:var(--paper-2);padding:6rem 6vw 7rem;overflow:hidden}
+.hood .section-head{margin-bottom:2.4rem}
+
+.hood-stage{max-width:980px;margin:0 auto}
+
+/* toolbar — which resident is on the street + controls */
+.hood-toolbar{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+  margin-bottom:1rem;font-family:var(--mono);
+}
+.hood-meta{font-size:.8rem;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase}
+.hood-meta strong{color:var(--green);font-weight:600}
+.hood-controls{display:flex;gap:.5rem}
+.hood-btn{
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;
+  background:transparent;color:var(--green-deep);
+  border:1.5px solid var(--green);border-radius:999px;padding:.4rem .9rem;cursor:pointer;
+  transition:background .18s,color .18s,transform .18s;
+}
+.hood-btn:hover{background:var(--green);color:var(--paper);transform:translateY(-1px)}
+.hood-btn.ghost{border-color:var(--line);color:var(--ink-soft)}
+.hood-btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* the aerial map frame */
+.hood-map{
+  position:relative;width:100%;aspect-ratio:1152/840;border-radius:var(--r);overflow:hidden;
+  border:2px solid var(--green-deep);
+  box-shadow:0 24px 60px rgba(22,23,15,.22),inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.hood-map img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03)}
+.hood-markers{position:absolute;inset:0}
+
+/* a single house marker */
+.hood-house{
+  position:absolute;transform:translate(-50%,-50%);
+  width:5.4%;aspect-ratio:1;display:grid;place-items:center;
+  background:none;border:none;padding:0;cursor:pointer;
+}
+/* roof glow on hover */
+.hood-house::before{
+  content:"";position:absolute;left:50%;top:50%;width:340%;height:340%;
+  transform:translate(-50%,-50%) scale(.5);border-radius:50%;
+  background:radial-gradient(circle,rgba(183,208,140,.85) 0%,rgba(120,170,60,.4) 38%,transparent 68%);
+  opacity:0;transition:opacity .3s ease,transform .4s cubic-bezier(.22,.61,.36,1);
+  pointer-events:none;mix-blend-mode:screen;
+}
+.hood-house:hover::before,.hood-house:focus-visible::before{opacity:1;transform:translate(-50%,-50%) scale(1)}
+
+/* the glowing dot */
+.hood-pin{
+  position:relative;width:42%;aspect-ratio:1;min-width:14px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff6c9,var(--yellow) 50%,#d49f12 85%);
+  box-shadow:0 0 0 2px rgba(42,63,18,.55),0 2px 7px rgba(0,0,0,.45),0 0 14px rgba(244,197,24,.7);
+  transition:transform .25s cubic-bezier(.22,.61,.36,1),box-shadow .25s;
+}
+.hood-pin::after{
+  content:"";position:absolute;inset:-7px;border-radius:50%;
+  border:2px solid rgba(244,197,24,.75);animation:hoodPulse 2.3s cubic-bezier(.22,.61,.36,1) infinite;
+}
+.hood-house:hover .hood-pin,.hood-house:focus-visible .hood-pin{
+  transform:scale(1.28);
+  box-shadow:0 0 0 2px rgba(42,63,18,.6),0 0 18px rgba(183,208,140,.95),0 0 34px rgba(120,170,60,.7);
+}
+@keyframes hoodPulse{0%{transform:scale(.8);opacity:.9}70%{transform:scale(1.7);opacity:0}100%{transform:scale(1.7);opacity:0}}
+
+.hood-hint{
+  text-align:center;margin-top:1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;
+  color:var(--ink-soft);text-transform:uppercase;transition:opacity .3s;
+}
+
+/* ---------- persona info card (no dialogue — background only) ---------- */
+.persona{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:5vh 5vw;
+  opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s}
+.persona.show{opacity:1;visibility:visible}
+.persona-backdrop{position:absolute;inset:0;background:rgba(16,18,10,.62);backdrop-filter:blur(3px)}
+
+.persona-card{
+  position:relative;z-index:2;width:min(560px,94vw);max-height:90vh;overflow:auto;
+  background:var(--paper);border:1px solid var(--line);border-radius:calc(var(--r) + 4px);
+  padding:2rem 2.1rem 2.2rem;
+  box-shadow:0 30px 80px rgba(16,18,10,.5);
+  transform:translateY(20px) scale(.97);transition:transform .45s cubic-bezier(.22,.61,.36,1);
+}
+.persona.show .persona-card{transform:none}
+.persona-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:6px;
+  background:linear-gradient(90deg,var(--green),var(--yellow));border-radius:calc(var(--r) + 4px) calc(var(--r) + 4px) 0 0}
+
+.persona-close{
+  position:absolute;top:.9rem;right:1rem;width:30px;height:30px;border-radius:50%;
+  background:transparent;border:1.5px solid var(--line);color:var(--ink-soft);
+  font-size:.85rem;cursor:pointer;transition:transform .2s,color .2s,border-color .2s;
+}
+.persona-close:hover{color:var(--green-deep);border-color:var(--green);transform:rotate(90deg)}
+
+.persona-top{display:flex;gap:1.2rem;align-items:center;margin-bottom:1.2rem;margin-top:.4rem}
+.persona-portrait{
+  width:104px;height:104px;flex-shrink:0;border-radius:16px;overflow:hidden;
+  border:2px solid var(--green-deep);box-shadow:0 8px 20px rgba(22,23,15,.2)
+}
+.persona-portrait svg{display:block;width:100%;height:100%;animation:personaIn .5s ease both}
+@keyframes personaIn{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
+.persona-id{min-width:0}
+.persona-tag{
+  display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--green);border:1px solid var(--green-soft);background:rgba(183,208,140,.25);
+  padding:.18rem .55rem;border-radius:999px;margin-bottom:.5rem;
+}
+.persona-id h4{font-family:var(--disp);font-weight:800;font-size:1.9rem;line-height:1;letter-spacing:-.02em}
+.persona-role{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);margin-top:.35rem;letter-spacing:.03em}
+
+.persona-quote{
+  font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.5;color:var(--green-deep);
+  border-left:3px solid var(--yellow);padding:.2rem 0 .2rem 1rem;margin:0 0 1.1rem;
+}
+.persona-bio{font-size:1rem;line-height:1.62;color:var(--ink-soft);margin-bottom:1.2rem}
+
+.persona-facts{list-style:none;display:flex;flex-direction:column;gap:.5rem;border-top:1px solid var(--line);padding-top:1.1rem}
+.persona-facts li{position:relative;padding-left:1.5rem;font-size:.92rem;color:var(--ink)}
+.persona-facts li::before{content:"";position:absolute;left:0;top:.5rem;width:9px;height:9px;border-radius:2px;
+  background:var(--green);transform:rotate(45deg)}
+.persona-facts li strong{color:var(--green-deep)}
+
+@media (max-width:560px){
+  .persona-top{flex-direction:column;text-align:center;align-items:center}
+  .hood-toolbar{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .hood-pin::after{animation:none}
+  *{transition-duration:.12s !important}
+}

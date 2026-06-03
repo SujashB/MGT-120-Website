@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HOAs — My Problem or Your Problem? · Team 6</title>
+<meta name="description" content="A scroll-driven case study on Homeowners Associations: the broken governance, Fred's story, and a future built on AI clarity and centralized service." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+
+<!-- scroll progress -->
+<div class="progress" id="progress"></div>
+
+<!-- floating nav -->
+<nav class="nav" id="nav">
+  <a class="nav-mark" href="#top">HOA<span>/</span>120</a>
+  <div class="nav-links">
+    <a href="#current">Current</a>
+    <a href="#fred">Fred</a>
+    <a href="#future">Future</a>
+  </div>
+  <span class="nav-team">Team&nbsp;6</span>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="grain"></div>
+  <div class="hero-arcs" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker reveal">MGT&nbsp;120 · Final Presentation</p>
+    <h1 class="hero-title">
+      <span class="reveal" style="--d:.05s">Homeowners</span>
+      <span class="reveal" style="--d:.12s">Associations</span>
+      <span class="reveal accent" style="--d:.19s">(HOAs)</span>
+    </h1>
+    <p class="hero-q reveal" style="--d:.3s">My&nbsp;Problem <em>or</em> Your&nbsp;Problem?</p>
+    <div class="hero-house reveal" style="--d:.42s" aria-hidden="true">
+      <div class="hh-tree hh-tree-l"></div>
+      <div class="hh-tree hh-tree-r"></div>
+      <div class="hh-body">
+        <div class="hh-roof"></div>
+        <div class="hh-wall"><span></span><span></span><span></span><span></span></div>
+        <div class="hh-door"></div>
+      </div>
+      <div class="hh-hand"></div>
+    </div>
+    <p class="hero-team reveal" style="--d:.55s">
+      <strong>Team 6</strong> — Tara Ansavananda · Guadalupe Barajas · Sujash Barman · Jen Dong · Erika Glass · Taran Singh · Justus Weatherspoon · Nelson Zhu
+    </p>
+  </div>
+  <div class="scroll-cue reveal" style="--d:.7s">scroll <span>↓</span></div>
+</header>
+
+<!-- ============ HOOK ============ -->
+<section class="hook">
+  <div class="grain"></div>
+  <h2 class="hook-line">
+    <span class="reveal-up">Would you</span>
+    <span class="reveal-up pop" style="--d:.12s">pay</span>
+    <span class="reveal-up" style="--d:.24s">to lose your</span>
+    <span class="reveal-up" style="--d:.36s">freedom?</span>
+  </h2>
+</section>
+
+<!-- ============ AMERICAN NIGHTMARE ============ -->
+<section class="nightmare">
+  <div class="nm-rows" aria-hidden="true">
+    <div class="nm-house"></div><div class="nm-house"></div><div class="nm-house"></div>
+    <div class="nm-house"></div><div class="nm-house"></div><div class="nm-house"></div>
+  </div>
+  <div class="nm-bolt b1">⚡</div><div class="nm-bolt b2">⚡</div><div class="nm-bolt b3">⚡</div>
+  <div class="nm-center reveal">
+    <p class="nm-cloud">The</p>
+    <h2 class="nm-title">American<br>Nightmare</h2>
+  </div>
+  <span class="tag tag-a reveal">Rapidly expanding…</span>
+  <span class="tag tag-b reveal" style="--d:.1s">Conformity &amp; uniformity valued…</span>
+  <span class="tag tag-c reveal" style="--d:.2s">Planned community…</span>
+  <span class="tag tag-d reveal" style="--d:.3s">Rising fees…</span>
+  <span class="tag tag-e reveal" style="--d:.4s">Self-expression eliminated…</span>
+</section>
+
+<!-- ============ DIVIDER: CURRENT STATE ============ -->
+<section class="divider" id="current">
+  <div class="div-card reveal">
+    <span class="div-num">01</span>
+    <h2>Current State</h2>
+  </div>
+</section>
+
+<!-- ============ THE DOCUMENTS ============ -->
+<section class="docs">
+  <div class="section-head reveal">
+    <p class="kicker dark">The paperwork you sign</p>
+    <h3>A binder of rules most owners never read</h3>
+  </div>
+  <div class="doc-grid">
+    <article class="doc reveal" style="--d:.05s"><span class="doc-tab">CC&amp;Rs</span><p>Declaration of Covenants, Conditions &amp; Restrictions</p></article>
+    <article class="doc reveal" style="--d:.12s"><span class="doc-tab">Bylaws</span><p>Board structure, meetings, voting &amp; member rights</p></article>
+    <article class="doc reveal" style="--d:.19s"><span class="doc-tab">Guidelines</span><p>Architectural review — roofs, fences, paint, landscaping</p></article>
+    <article class="doc reveal" style="--d:.26s"><span class="doc-tab">Maintenance</span><p>Lawns mowed, no weeds, debris or unsightly materials</p></article>
+    <article class="doc reveal" style="--d:.33s"><span class="doc-tab">Parking</span><p>Garage/driveway only · no overnight street parking</p></article>
+  </div>
+
+  <div class="fine reveal">
+    <h4>Fine Schedule</h4>
+    <table class="fine-table">
+      <thead><tr><th>Violation</th><th>First Offense</th><th>Repeat Offense</th></tr></thead>
+      <tbody>
+        <tr><td>Trash cans visible</td><td>$25</td><td>$50</td></tr>
+        <tr><td>Parking violation</td><td>$25</td><td>$50</td></tr>
+        <tr><td>Unapproved exterior change</td><td>$100</td><td>$200</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ MEET FRED ============ -->
+<section class="fred" id="fred">
+  <div class="fred-portrait reveal">
+    <div class="fp-frame">
+      <div class="fp-avatar" aria-hidden="true">
+        <div class="fp-face"></div>
+        <div class="fp-shirt"></div>
+      </div>
+      <span class="fp-tag">first-time homeowner</span>
+    </div>
+  </div>
+  <div class="fred-copy">
+    <p class="kicker dark reveal">The homeowner</p>
+    <h3 class="reveal" style="--d:.08s">Meet&nbsp;Fred</h3>
+    <ul class="fred-facts">
+      <li class="reveal" style="--d:.12s"><span>01</span>37 years old</li>
+      <li class="reveal" style="--d:.2s"><span>02</span>Husband and father</li>
+      <li class="reveal" style="--d:.28s"><span>03</span>Contractor</li>
+      <li class="reveal" style="--d:.36s"><span>04</span>First-time homeowner</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="section-head reveal">
+    <p class="kicker">By the numbers</p>
+    <h3>The trust gap is real — and it starts with the documents</h3>
+  </div>
+  <div class="stat-grid">
+    <article class="stat reveal" style="--d:.05s">
+      <span class="stat-num" data-count="60" data-suffix="%">0%</span>
+      <p>of homeowners <strong>don't</strong> have a positive view of HOAs</p>
+    </article>
+    <article class="stat reveal" style="--d:.15s">
+      <span class="stat-num" data-count="63" data-suffix="%">0%</span>
+      <p><strong>5 of 8 residents</strong> cited bylaw language &amp; readability as their primary issue</p>
+    </article>
+    <article class="stat reveal" style="--d:.25s">
+      <span class="stat-num" data-count="18" data-suffix="th">0</span>
+      <p>grade reading level of bylaws &amp; CC&amp;Rs — the average U.S. adult reads at a <strong>7th-grade</strong> level</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ THE HOOP ============ -->
+<section class="hoop">
+  <div class="hoop-glow" aria-hidden="true"></div>
+  <div class="hoop-art reveal" aria-hidden="true">
+    <div class="hoop-board"></div>
+    <div class="hoop-rim"></div>
+    <div class="hoop-pole"></div>
+    <div class="hoop-base"></div>
+  </div>
+  <div class="hoop-copy reveal" style="--d:.2s">
+    <p class="kicker">A simple wish</p>
+    <h3>Fred buys his daughter a basketball hoop.</h3>
+    <p class="lead">“Yay! Thank you for this hoop, Dad. I'm sooo happy!”</p>
+  </div>
+</section>
+
+<!-- ============ THE LEGALESE ============ -->
+<section class="legalese">
+  <div class="section-head reveal">
+    <p class="kicker dark">First, he checks the rules</p>
+    <h3>Fred turns to his CC&amp;Rs…</h3>
+  </div>
+  <div class="clause-stack">
+    <article class="clause reveal" style="--d:.05s">
+      <span class="clause-no">1.1.31</span>
+      <h5>Dedicated Master Association Property</h5>
+      <p>…means any portion of the Master Association Property which is subject to an <mark>unaccepted offer of dedication</mark> to a Governing Authority for public access, utility, use or maintenance purposes…</p>
+    </article>
+    <article class="clause reveal" style="--d:.12s">
+      <span class="clause-no">3.1.11</span>
+      <h5>Restricted Areas</h5>
+      <p>A Supplemental Declaration or Notice of Annexation may <mark>designate exclusive use areas</mark> within the Master Association Property for the exclusive use or maintenance by one or more Owners (such as yards or common driveway areas)…</p>
+    </article>
+    <article class="clause reveal" style="--d:.19s">
+      <span class="clause-no">7.30.1</span>
+      <h5>Authorized Uses</h5>
+      <p>No object or device of any kind shall be <mark>affixed to the structural wall or fence</mark>… including driving or attaching any nails, screws, bolts or other object… without the prior written approval of the Owner of the Burdened Lot.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CONFUSED ============ -->
+<section class="confused">
+  <h3 class="confused-verdict reveal">…and still <em>confused.</em></h3>
+  <div class="bubbles">
+    <span class="bubble reveal" style="--d:.05s">“So lengthy.”</span>
+    <span class="bubble reveal" style="--d:.12s">“I can't find the answer.”</span>
+    <span class="bubble reveal" style="--d:.19s">“Nothing about a basketball hoop…”</span>
+    <span class="bubble reveal" style="--d:.26s">“I'm not interested in this.”</span>
+    <span class="bubble big reveal" style="--d:.33s">“I wish there was something to help me better understand this…”</span>
+    <span class="bubble reveal" style="--d:.4s">“What does all this mean??”</span>
+  </div>
+</section>
+
+<!-- ============ INTERLUDE ============ -->
+<section class="interlude">
+  <div class="grain"></div>
+  <h2 class="interlude-text">One day later<span class="dots">…</span></h2>
+</section>
+
+<!-- ============ CONFRONTATION ============ -->
+<section class="confront">
+  <div class="confront-inner">
+    <div class="speech speech-l reveal">FRED&nbsp;!!!</div>
+    <div class="confront-mid reveal" style="--d:.15s">
+      <div class="jersey">HOA<span>#1</span></div>
+      <p>The hoop violated a rule he never knew existed.</p>
+    </div>
+    <div class="speech speech-r reveal" style="--d:.3s">NOOOOO&nbsp;!!!</div>
+  </div>
+</section>
+
+<!-- ============ RIGHTS VS STANDARDS ============ -->
+<section class="versus">
+  <div class="vs-col vs-left">
+    <h4 class="reveal">Property Rights</h4>
+    <ul>
+      <li class="reveal" style="--d:.05s">Owner autonomy</li>
+      <li class="reveal" style="--d:.1s">Privacy</li>
+      <li class="reveal" style="--d:.15s">Self-expression</li>
+      <li class="reveal" style="--d:.2s">Freedom from interference</li>
+      <li class="reveal" style="--d:.25s">Individualism</li>
+    </ul>
+  </div>
+  <div class="vs-badge reveal">VS</div>
+  <div class="vs-col vs-right">
+    <h4 class="reveal">Community Standards</h4>
+    <ul>
+      <li class="reveal" style="--d:.05s">Curb appeal</li>
+      <li class="reveal" style="--d:.1s">Shared property values</li>
+      <li class="reveal" style="--d:.15s">Neighborhood cohesion</li>
+      <li class="reveal" style="--d:.2s">Uniform aesthetics</li>
+      <li class="reveal" style="--d:.25s">HOA enforcement</li>
+    </ul>
+  </div>
+  <p class="vs-quote reveal" style="--d:.3s">“Why do I have to pay so much for my HOA even though it doesn't provide many services?”</p>
+</section>
+
+<!-- ============ BROKEN MATH ============ -->
+<section class="broken">
+  <div class="broken-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 240" preserveAspectRatio="xMidYMax meet">
+      <g fill="#0d1f12" stroke="#3e5c1c" stroke-width="2">
+        <path d="M40 240V150l60-50 60 50v90z"/><path d="M180 240V120l70-55 70 55v120z"/>
+        <path d="M340 240V160l55-45 55 45v80z"/><path d="M490 240V110l75-60 75 60v130z"/>
+        <path d="M670 240V140l65-52 65 52v100z"/><path d="M820 240V165l50-42 50 42v75z"/>
+        <path d="M950 240V125l68-54 68 54v115z"/><path d="M1110 240V155l45-38 45 38v85z"/>
+      </g>
+    </svg>
+  </div>
+  <h3 class="broken-title reveal">The math is <em>broken</em></h3>
+  <p class="broken-line reveal" style="--d:.15s">Amendments need <b>67%</b> approval from homeowners</p>
+  <p class="broken-line dim reveal" style="--d:.3s">but only <b>40%</b> of homeowners attend meetings</p>
+</section>
+
+<!-- ============ STUCK IN TIME ============ -->
+<section class="stuck">
+  <div class="stuck-grid">
+    <div class="stuck-head reveal">
+      <span class="big-num" data-count="50" data-suffix="%">0%</span>
+      <p>of CC&amp;Rs are from the <strong>1980s</strong> with no updates.</p>
+    </div>
+    <div class="stuck-cost">
+      <div class="cost reveal" style="--d:.1s"><span class="cost-v">1–2 yrs</span><span class="cost-l">to change a single rule</span></div>
+      <div class="cost reveal" style="--d:.2s"><span class="cost-v">$5,000</span><span class="cost-l">average cost to amend</span></div>
+    </div>
+  </div>
+  <p class="stuck-foot reveal" style="--d:.3s">Recruitment driven by <em>desperation</em> — boards struggle to fill an empty chair.</p>
+</section>
+
+<!-- ============ WALK THE CUL-DE-SAC (interactive) ============ -->
+<section class="hood" id="hood">
+  <div class="section-head reveal">
+    <p class="kicker dark">Walk the cul-de-sac</p>
+    <h3>Knock on any door — it's the same story.</h3>
+  </div>
+
+  <div class="hood-stage reveal">
+    <div class="hood-toolbar">
+      <span class="hood-meta">On the street today: <strong id="hoodName">John</strong></span>
+      <div class="hood-controls">
+        <button id="hoodPrev" class="hood-btn ghost">‹ Prev</button>
+        <button id="hoodNext" class="hood-btn">Next ›</button>
+        <button id="hoodReset" class="hood-btn ghost">↺ Reset</button>
+      </div>
+    </div>
+
+    <div class="hood-map" id="hoodMap">
+      <img src="assets/neighborhood.png" alt="Aerial view of the neighborhood cul-de-sac" />
+      <div class="hood-markers" id="hoodMarkers"></div>
+    </div>
+    <p class="hood-hint" id="hoodHint">Hover a home · click a glowing marker to meet the resident</p>
+  </div>
+
+  <!-- persona card: background only, no dialogue -->
+  <div class="persona" id="persona" aria-hidden="true">
+    <div class="persona-backdrop" id="personaBackdrop"></div>
+    <div class="persona-card" role="dialog" aria-modal="true">
+      <button class="persona-close" id="personaClose" title="Close">✕</button>
+      <div class="persona-top">
+        <div class="persona-portrait" id="personaPortrait"></div>
+        <div class="persona-id">
+          <span class="persona-tag" id="personaTag">Homeowner</span>
+          <h4 id="personaName">John</h4>
+          <p class="persona-role" id="personaRole"></p>
+        </div>
+      </div>
+      <blockquote class="persona-quote" id="personaQuote"></blockquote>
+      <p class="persona-bio" id="personaBio"></p>
+      <ul class="persona-facts" id="personaFacts"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIVIDER: FUTURE STATE ============ -->
+<section class="divider future" id="future">
+  <div class="div-card light reveal">
+    <span class="div-num">02</span>
+    <h2>Future State</h2>
+  </div>
+</section>
+
+<!-- ============ SOLUTION ============ -->
+<section class="solution">
+  <div class="section-head reveal">
+    <p class="kicker">Two pillars of reform</p>
+    <h3>Make the rules legible. Make the service fast.</h3>
+  </div>
+  <div class="sol-grid">
+    <article class="sol-card reveal" style="--d:.06s">
+      <span class="sol-ic">✦</span>
+      <h4>AI to aid CC&amp;R understanding</h4>
+      <ul>
+        <li>Plain-language <strong>AI summarization</strong> of dense legalese</li>
+        <li>Ask a question, get the relevant clause</li>
+        <li>Ability to implement a <strong>Document Summarization Model (DSM)</strong></li>
+      </ul>
+    </article>
+    <article class="sol-card reveal" style="--d:.16s">
+      <span class="sol-ic">⚖</span>
+      <h4>Board reform</h4>
+      <ul>
+        <li>Lower the barrier to update outdated CC&amp;Rs</li>
+        <li>Transparent, accountable decision-making</li>
+        <li>Recruitment by purpose — not desperation</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="ba">
+  <div class="ba-col before">
+    <span class="ba-label reveal">Current System</span>
+    <ul>
+      <li class="reveal" style="--d:.05s">Manually tracked</li>
+      <li class="reveal" style="--d:.1s">Requests get lost</li>
+      <li class="reveal" style="--d:.15s">Not standardized</li>
+    </ul>
+    <div class="ba-time reveal" style="--d:.2s"><span class="ba-days" data-count="7">0</span><small>days to resolve</small></div>
+  </div>
+
+  <div class="ba-col after">
+    <span class="ba-label light reveal">Our System</span>
+    <div class="crm reveal" style="--d:.1s" aria-hidden="true">
+      <div class="crm-bar"><i></i><i></i><i></i></div>
+      <div class="crm-tabs"><span class="on">Open</span><span>In Review</span><span>Resolved</span></div>
+      <div class="crm-charts"><div class="crm-donut"></div><div class="crm-bars"><i></i><i></i><i></i></div></div>
+    </div>
+    <ul>
+      <li class="reveal" style="--d:.15s">Centralized CRM</li>
+      <li class="reveal" style="--d:.2s">Automated notifications</li>
+      <li class="reveal" style="--d:.25s">Every request a “ticket” with a timestamp</li>
+    </ul>
+    <div class="ba-time light reveal" style="--d:.3s"><span class="ba-days" data-count="2">0</span><small>days to resolve</small></div>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<footer class="close">
+  <div class="hero-arcs" aria-hidden="true"></div>
+  <p class="kicker reveal">From nightmare to neighborhood</p>
+  <h2 class="close-title reveal" style="--d:.1s">Clear rules. Faster service.<br>An HOA that works <em>for</em> you.</h2>
+  <p class="close-team reveal" style="--d:.2s">
+    <strong>Team 6</strong><br>
+    Tara Ansavananda · Guadalupe Barajas · Sujash Barman · Jen Dong<br>
+    Erika Glass · Taran Singh · Justus Weatherspoon · Nelson Zhu
+  </p>
+  <p class="close-meta reveal" style="--d:.3s">MGT 120 · Final Presentation</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

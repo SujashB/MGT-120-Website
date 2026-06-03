@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+_slides_text.json
+*.log
+
+# CV debug overlays (regenerate with scripts/annotate_roofs.py)
+scripts/check.png
+scripts/roofs_annotated.png
+scripts/roofs_mask.png
