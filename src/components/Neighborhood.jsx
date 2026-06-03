@@ -59,7 +59,7 @@ export default function Neighborhood({ onComplete }) {
       >
         <Badge variant="soft" className="mb-2">Pick a house · interactive</Badge>
         <h3 className="font-disp text-[clamp(1.4rem,3.2vw,2.5rem)] font-bold leading-tight tracking-tight text-ink">
-          Pick any glowing roof — who lives there?
+          Pick any glowing dot — who lives there?
         </h3>
       </motion.div>
 
@@ -100,7 +100,7 @@ export default function Neighborhood({ onComplete }) {
 
       <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.05em] text-inksoft">
         <MousePointerClick className="h-3.5 w-3.5" />
-        {seen ? "Pick another glowing roof" : "Pick a glowing roof to find out who lives there"}
+        {seen ? "Pick another glowing dot" : "Pick a glowing dot to find out who lives there"}
       </p>
 
       {/* persona card */}

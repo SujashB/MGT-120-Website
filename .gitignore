@@ -8,3 +8,6 @@ _slides_text.json
 scripts/check.png
 scripts/roofs_annotated.png
 scripts/roofs_mask.png
+
+# slide-render contact sheets (debug only)
+scripts/sheet*.jpg
