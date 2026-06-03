@@ -84,14 +84,14 @@ export default function SlideDeck({ items }) {
       {/* top bar */}
       <header className="flex items-center justify-between gap-3 border-b border-line px-5 py-2.5">
         <div className="flex items-baseline gap-2.5 font-disp text-[1.05rem] font-extrabold tracking-tight">
-          HOA<span className="text-brand">/</span>120
+          HOA<span className="text-ink">/</span>120
           <em className="hidden font-serif text-[0.8rem] font-normal not-italic text-inksoft sm:inline">
             My Problem or Your Problem?
           </em>
         </div>
         <nav className="hidden gap-5 md:flex">
           {sections.map((s) => (
-            <span key={s} className={`relative font-mono text-[0.7rem] uppercase tracking-[0.16em] transition-colors ${current.section === s ? "text-brand" : "text-inksoft/60"}`}>
+            <span key={s} className={`relative font-mono text-[0.7rem] uppercase tracking-[0.16em] transition-colors ${current.section === s ? "text-ink" : "text-inksoft/60"}`}>
               {s}
               {current.section === s && (
                 <motion.span layoutId="sec" className="absolute -bottom-2 left-0 right-0 h-0.5 rounded bg-gold" />

@@ -1,6 +1,9 @@
 /* Slide manifest — rendered straight from
-   "MGT 120 - Final Presentation (2).pdf" (37 slides).
-   The interactive neighborhood is inserted after GAME_AFTER. */
+   "MGT 120_Team6_HOA_Final Presentation.pdf" (44 pages).
+   PDF pages 24–30 are static screenshots of this site's own interactive
+   neighborhood, so we skip them and splice the *live* game in their place
+   (after GAME_AFTER). `n` is the real PDF page number, so each slide keeps
+   its matching /slides/slide-NN.jpg file. */
 
 export const SLIDES = [
   { n: 1,  section: "Intro",        title: "Homeowners Associations — My Problem or Your Problem?" },
@@ -26,20 +29,20 @@ export const SLIDES = [
   { n: 21, section: "Current State", title: "The math is broken" },
   { n: 22, section: "Current State", title: "Change is slow and costly" },
   { n: 23, section: "Current State", title: "Recruitment driven by desperation" },
-  { n: 24, section: "Future State", title: "Future State" },
-  { n: 25, section: "Future State", title: "Three pillars of reform" },
-  { n: 26, section: "Future State", title: "Pillar 1 — A digitized HOA platform" },
-  { n: 27, section: "Future State", title: "An AI summarizer, accessible anytime" },
-  { n: 28, section: "Future State", title: "Before & after — our system" },
-  { n: 29, section: "Future State", title: "Pillar 2 — AI for CC&R & bylaw understanding" },
-  { n: 30, section: "Future State", title: "Introducing HONNA — an AI HOA assistant" },
-  { n: 31, section: "Future State", title: "Before & after HONNA" },
-  { n: 32, section: "Future State", title: "The whole neighborhood benefits" },
-  { n: 33, section: "Future State", title: "Pillar 3 — A ticketing system in the CRM" },
-  { n: 34, section: "Future State", title: "Current system — physical & slow (~10 days)" },
-  { n: 35, section: "Future State", title: "The ticketing workflow" },
-  { n: 36, section: "Future State", title: "Our system — centralized CRM (~4 days)" },
-  { n: 37, section: "Future State", title: "Thank you — Team 6" },
+  { n: 31, section: "Future State", title: "Future State" },
+  { n: 32, section: "Future State", title: "Three pillars of reform" },
+  { n: 33, section: "Future State", title: "Pillar 1 — A digitized HOA platform" },
+  { n: 34, section: "Future State", title: "An AI summarizer, accessible anytime" },
+  { n: 35, section: "Future State", title: "Before & after — our system" },
+  { n: 36, section: "Future State", title: "Pillar 2 — AI for CC&R & bylaw understanding" },
+  { n: 37, section: "Future State", title: "Introducing HONNA — an AI HOA assistant" },
+  { n: 38, section: "Future State", title: "Before & after HONNA" },
+  { n: 39, section: "Future State", title: "The whole neighborhood benefits" },
+  { n: 40, section: "Future State", title: "Pillar 3 — A ticketing system in the CRM" },
+  { n: 41, section: "Future State", title: "Current system — physical & slow (~10 days)" },
+  { n: 42, section: "Future State", title: "Our system — centralized CRM" },
+  { n: 43, section: "Future State", title: "The ticketing workflow (~4 days)" },
+  { n: 44, section: "Future State", title: "Thank you — Team 6" },
 ].map((s) => ({ ...s, type: "image", src: `/slides/slide-${String(s.n).padStart(2, "0")}.jpg` }));
 
 /* Insert the interactive neighborhood right after this slide number
